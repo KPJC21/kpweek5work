@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/layout';
-import { getSortedList } from '../lib/List';
+import { getSortedList } from '../lib/data';
 
 
 export async function getStaticProps() {
-  const allData = await getSortedList();
+  const allData = getSortedList();
   return {
     props: {
       allData
